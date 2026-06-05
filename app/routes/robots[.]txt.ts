@@ -7,7 +7,7 @@ export async function loader() {
 		{
 			userAgent: "*",
 			[isProduction ? "allow" : "disallow"]: ["/"],
-			sitemap: [`${domain}/jdhewitt.github.io/sitemap-index.xml`],
+			sitemap: [`${domain}/sitemap-index.xml`],
 		},
 	])
 	return new Response(robotsTxt, {

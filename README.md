@@ -1,6 +1,6 @@
-## Hewitt Builders
+## Bottega Matti
 
-This is the repo for the landing page for www.hewittbuilders.com
+This is the repo for the landing page for <www.bottegamatti.com>
 
 ### Local Development
 
@@ -10,4 +10,4 @@ This is the repo for the landing page for www.hewittbuilders.com
 
 ### Special Thanks
 
-- Special thanks to the Forge42 team for creating the base stack this website is built from: https://github.com/forge-42/base-stack
+- Special thanks to the Forge42 team for creating the base stack this website is built from: <https://github.com/forge-42/base-stack>
