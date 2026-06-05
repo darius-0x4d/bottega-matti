@@ -1,7 +1,6 @@
-import { t } from "i18next"
 import type { JSX } from "react"
+import type { useTranslation } from "react-i18next"
 import menuPdf from "~/assets/m6.pdf"
-import { Link } from "~/library/link/link"
 import { Button } from "../ui/button"
 
 export function TypographyH2(sectionTitle: string): JSX.Element {
@@ -46,11 +45,11 @@ export function TypographyListContent(listItems: JSX.Element[]): JSX.Element {
 	)
 }
 
-export function TypographyButton(): JSX.Element {
+export function TypographyButton(t: ReturnType<typeof useTranslation>["t"]): JSX.Element {
 	const linkToMenu = menuPdf
 	return (
 		<div>
-			<p>View our menu</p>
+			<p>{t("menuDescription")}</p>
 			<div className="flex justify-center pt-8">
 				<Button asChild size={"lg"}>
 					<a href={linkToMenu} download="Bottega_Matti_Menu.pdf">
@@ -59,32 +58,5 @@ export function TypographyButton(): JSX.Element {
 				</Button>
 			</div>
 		</div>
-	)
-}
-
-export function TypographyListParagraphContent(): JSX.Element {
-	return (
-		<>
-			<div className="ml-6 list-disc [&>li]:mt-2">
-				<p>Address: Cra. 4 #11-88, Bogotá, Colombia</p>
-			</div>
-			<div className="">
-				<p>Hours</p>
-				<ul className="my-6 ml-6 list-disc [&>li]:mt-2 [&>li]:pb-6">
-					<li>
-						<span className="font-bold">Monday:</span> 12:00 PM - 8:30 PM
-					</li>
-					<li>
-						<span className="font-bold">Tuesday:</span> Closed
-					</li>
-					<li>
-						<span className="font-bold">Wednesday - Saturday:</span> 12:00 PM - 8:30 PM
-					</li>
-					<li>
-						<span className="font-bold">Sunday & All Holidays:</span> 12:00 PM - 5:00 PM
-					</li>
-				</ul>
-			</div>
-		</>
 	)
 }

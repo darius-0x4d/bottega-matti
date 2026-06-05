@@ -2,21 +2,17 @@
 	"hi": "React Router is awesome!",
 	"pageTitle": "Bottega Matti",
 	"pageDescription": "Italia es de todos",
-	"purposeTitle": "Menu",
-	"purposeDescription": "To enhance the construction experience and deliver on the promise that quality matters.",
-	"valuesTitle": "Find Us",
-	"valuesStewardship": {
-		"title": "Stewardship",
-		"description": " in building practices, communications, and team management."
-	},
-	"valuesIntegrity": {
-		"title": "Integrity",
-		"description": " in the process, the details, and the final product."
-	},
-	"valuesQuality": {
-		"title": "Quality",
-		"description": " in the experience, the materials, and the built structure."
-	},
+	"menuTitle": "Menu",
+	"menuDescription": "View our menu",
+	"findUsTitle": "Find Us",
+	"followUsTitle": "Follow Us",
+	"addressTitle": "Address",
+	"hoursTitle": "Hours",
+	"monday": "Monday",
+	"tuesday": "Tuesday",
+	"wednesdayToSaturday": "Wednesday - Saturday",
+	"sundayHolidays": "Sunday & All Holidays",
+	"closed": "Closed",
 	"navigation": {
 		"back": "Go back",
 		"home": "Back to home",
