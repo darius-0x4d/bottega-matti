@@ -8,7 +8,7 @@ import { iconsSpritesheet } from "vite-plugin-icons-spritesheet"
 import tsconfigPaths from "vite-tsconfig-paths"
 
 export default defineConfig(({ mode }) => ({
-	base: "/",
+	base: "/bottega-matti/",
 	plugins: [
 		tailwindcss(),
 		// Run the react-compiler on .tsx files only when bundling
