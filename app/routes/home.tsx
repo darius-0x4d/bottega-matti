@@ -1,4 +1,5 @@
-import type { JSX } from "react"
+import { IconBrandInstagram, IconBrandTiktok, IconBrandWhatsapp } from "@tabler/icons-react"
+import { type JSX, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import food from "~/assets/food.png"
 import BottegaMattiLogo from "~/components/nav/BottegaMattiLogo"
@@ -26,7 +27,8 @@ const addressAndHours = (): JSX.Element => {
 		<>
 			<div className="my-6 list-disc [&>li]:mt-2 [&>li]:pb-6">
 				<p>
-					<span className="font-semibold text-lg">Address:</span> Cra. 4 #11-88, Bogotá, Colombia
+					<span className="font-semibold text-lg">Address:</span> Cra. 4 #11-88, La Candelaria, Bogotá, Cundinamarca,
+					Colombia
 				</p>
 			</div>
 			<div className="">
@@ -50,6 +52,77 @@ const addressAndHours = (): JSX.Element => {
 	)
 }
 
+const PhoneLink = () => {
+	const [isMobile, setIsMobile] = useState(false)
+	const [copied, setCopied] = useState(false)
+	const phoneNumber = "+57 315 2235301"
+	const rawPhoneNumber = "573152235301"
+
+	useEffect(() => {
+		setIsMobile(/Mobi|Android/i.test(navigator.userAgent))
+	}, [])
+
+	const handleDesktopClick = () => {
+		navigator.clipboard.writeText(phoneNumber).then(() => {
+			setCopied(true)
+			setTimeout(() => setCopied(false), 2000) // Reset after 2 seconds
+		})
+	}
+
+	if (isMobile) {
+		return (
+			<a
+				href={`https://wa.me/${rawPhoneNumber}`}
+				className="flex items-center space-x-2 text-lg leading-7 hover:underline"
+			>
+				<IconBrandWhatsapp size={24} />
+				<span>{phoneNumber}</span>
+			</a>
+		)
+	}
+
+	return (
+		<button
+			type="button"
+			onClick={handleDesktopClick}
+			className="flex items-center space-x-2 text-lg leading-7 hover:underline"
+		>
+			<IconBrandWhatsapp size={24} />
+			<span>{copied ? "Copied!" : phoneNumber}</span>
+		</button>
+	)
+}
+
+const socialMediaLinks = (): JSX.Element => {
+	return (
+		<div className="flex max-w-md flex-col">
+			<div className="mt-6">
+				<PhoneLink />
+			</div>
+
+			<a
+				href="https://www.instagram.com/bottegamatti/"
+				target="_blank"
+				rel="noopener noreferrer"
+				className="mt-6 flex items-center space-x-2 text-lg leading-7 hover:underline"
+			>
+				<IconBrandInstagram size={24} />
+				<span>bottegamatti</span>
+			</a>
+
+			<a
+				href="https://www.tiktok.com/@bottega.matti"
+				target="_blank"
+				rel="noopener noreferrer"
+				className="mt-6 flex items-center space-x-2 text-lg leading-7 hover:underline"
+			>
+				<IconBrandTiktok size={24} />
+				<span>bottega.matti</span>
+			</a>
+		</div>
+	)
+}
+
 export default function Index() {
 	const { t } = useTranslation()
 	const purposeTitle = t("purposeTitle")
@@ -57,6 +130,7 @@ export default function Index() {
 	const _purposeContent = TypographyP(purposeDescription)
 
 	const valuesTitle = t("valuesTitle")
+	const followUs = "Follow Us"
 	const valuesKeys = [
 		{ title: t("valuesStewardship.title"), description: t("valuesStewardship.description") },
 		{ title: t("valuesIntegrity.title"), description: t("valuesIntegrity.description") },
@@ -74,6 +148,7 @@ export default function Index() {
 			</div>
 			<SubSection title={purposeTitle} content={TypographyButton()} />
 			<SubSection title={valuesTitle} content={addressAndHours()} />
+			<SubSection title={followUs} content={socialMediaLinks()} />
 		</div>
 	)
 }

@@ -4,11 +4,11 @@ export const loader = async () => {
 	const domain = "https://darius-0x4d.github.io"
 	const sitemaps = generateSitemapIndex([
 		{
-			url: `${domain}/jdhewitt.github.io/sitemap.en.xml`,
+			url: `${domain}/sitemap.en.xml`,
 			lastmod: "2025-11-27",
 		},
 		{
-			url: `${domain}/jdhewitt.github.io/sitemap.es.xml`,
+			url: `${domain}/sitemap.es.xml`,
 			lastmod: "2025-11-27",
 		},
 	])
