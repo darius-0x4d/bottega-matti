@@ -1,6 +1,6 @@
 import type { JSX } from "react"
 import { useTranslation } from "react-i18next"
-import david from "../../public/DavidHewitt.jpg"
+import david from "~/assets/DavidHewitt.jpg"
 
 export function meta() {
 	const { t } = useTranslation()

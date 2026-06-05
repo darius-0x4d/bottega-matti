@@ -1,11 +1,9 @@
 import type { JSX } from "react"
 import { useTranslation } from "react-i18next"
-import { href } from "react-router"
-import HewittBuildersLogo from "~/components/nav/HewittBuildersLogo"
+import food from "~/assets/food.png"
+import BottegaMattiLogo from "~/components/nav/BottegaMattiLogo"
 import SubSection from "~/components/sub-section/sub-section"
-import { TypographyListContent, TypographyP } from "~/components/typography/typography-h2"
-import { Button } from "~/components/ui/button"
-import { Link } from "~/library/link"
+import { TypographyButton, TypographyP } from "~/components/typography/typography-h2"
 
 export function meta() {
 	const { t } = useTranslation()
@@ -23,11 +21,40 @@ const valuesListItem = (valueTitle: string, valueDescription: string): JSX.Eleme
 	)
 }
 
+const addressAndHours = (): JSX.Element => {
+	return (
+		<>
+			<div className="my-6 list-disc [&>li]:mt-2 [&>li]:pb-6">
+				<p>
+					<span className="font-semibold text-lg">Address:</span> Cra. 4 #11-88, Bogotá, Colombia
+				</p>
+			</div>
+			<div className="">
+				<p className="font-semibold text-lg">Hours</p>
+				<ul className="my-1 ml-6 list-disc [&>li]:mt-1">
+					<li>
+						<span className="font-bold">Monday:</span> 12:00 PM - 8:30 PM
+					</li>
+					<li>
+						<span className="font-bold">Tuesday:</span> Closed
+					</li>
+					<li>
+						<span className="font-bold">Wednesday - Saturday:</span> 12:00 PM - 8:30 PM
+					</li>
+					<li>
+						<span className="font-bold">Sunday & All Holidays:</span> 12:00 PM - 5:00 PM
+					</li>
+				</ul>
+			</div>
+		</>
+	)
+}
+
 export default function Index() {
 	const { t } = useTranslation()
 	const purposeTitle = t("purposeTitle")
 	const purposeDescription = t("purposeDescription")
-	const purposeContent = TypographyP(purposeDescription)
+	const _purposeContent = TypographyP(purposeDescription)
 
 	const valuesTitle = t("valuesTitle")
 	const valuesKeys = [
@@ -35,21 +62,18 @@ export default function Index() {
 		{ title: t("valuesIntegrity.title"), description: t("valuesIntegrity.description") },
 		{ title: t("valuesQuality.title"), description: t("valuesQuality.description") },
 	]
-	const valuesContent: JSX.Element[] = valuesKeys.map((valueskey) => {
+	const _valuesContent: JSX.Element[] = valuesKeys.map((valueskey) => {
 		return valuesListItem(valueskey.title, valueskey.description)
 	})
 
-	const linkToContactUs = href("/contact")
 	return (
 		<div className="flex flex-col">
-			<HewittBuildersLogo className="w-full max-w-[400px] self-center pt-6 pb-8" />
-			<SubSection title={purposeTitle} content={purposeContent} />
-			<SubSection title={valuesTitle} content={TypographyListContent(valuesContent)} />
-			<div className="flex justify-center pt-8">
-				<Button asChild size={"lg"}>
-					<Link to={linkToContactUs}>{t("navigation.contact_tab")}</Link>
-				</Button>
+			<BottegaMattiLogo className="w-full max-w-[400px] self-center pt-6 pb-8" />
+			<div className="mx-auto max-w-4xl text-center">
+				<img src={food} alt="Bottega Matti Food" className="mx-auto h-auto w-full max-w-sm rounded-lg" />
 			</div>
+			<SubSection title={purposeTitle} content={TypographyButton()} />
+			<SubSection title={valuesTitle} content={addressAndHours()} />
 		</div>
 	)
 }

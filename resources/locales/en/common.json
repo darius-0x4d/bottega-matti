@@ -1,10 +1,10 @@
 {
 	"hi": "React Router is awesome!",
-	"pageTitle": "Hewitt Builders",
-	"pageDescription": "Start your next project with Hewitt Builders today!",
-	"purposeTitle": "Our Purpose",
+	"pageTitle": "Bottega Matti",
+	"pageDescription": "Italia es de todos",
+	"purposeTitle": "Menu",
 	"purposeDescription": "To enhance the construction experience and deliver on the promise that quality matters.",
-	"valuesTitle": "Our Core Values",
+	"valuesTitle": "Find Us",
 	"valuesStewardship": {
 		"title": "Stewardship",
 		"description": " in building practices, communications, and team management."
@@ -22,7 +22,8 @@
 		"home": "Back to home",
 		"home_tab": "Home",
 		"about_tab": "About",
-		"contact_tab": "Contact Us"
+		"contact_tab": "Contact Us",
+		"view_menu": "View Menu"
 	},
 	"error": {
 		"500": {

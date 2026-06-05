@@ -1,12 +1,12 @@
 {
-	"name": "@hewittbuilders/website",
+	"name": "@bottegamatti/website",
 	"version": "0.0.1",
-	"author": "hewittbuilders",
+	"author": "bottegamatti",
 	"private": true,
 	"sideEffects": false,
 	"license": "MIT",
 	"type": "module",
-	"homepage": "https://hewittbuilders.com",
+	"homepage": "https://bottegamatti.com",
 	"scripts": {
 		"execute": "tsx",
 		"clean": "git clean -fdX --exclude=\"!.env\"",
