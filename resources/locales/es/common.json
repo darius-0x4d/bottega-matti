@@ -2,27 +2,24 @@
 	"hi": "¡React Router es increíble!",
 	"pageTitle": "Bottega Matti",
 	"pageDescription": "Italia es de todos",
-	"purposeTitle": "Nuestro Propósito",
-	"purposeDescription": "Mejorar la experiencia de construcción y cumplir la promesa de que la calidad importa.",
-	"valuesTitle": "Nuestros Valores Fundamentales",
-	"valuesStewardship": {
-		"title": "Administración",
-		"description": " en las prácticas de construcción, las comunicaciones y la gestión de equipos."
-	},
-	"valuesIntegrity": {
-		"title": "Integridad",
-		"description": " en el proceso, los detalles y el producto final."
-	},
-	"valuesQuality": {
-		"title": "Calidad",
-		"description": " en la experiencia, los materiales y la estructura construida."
-	},
+	"menuTitle": "Menú",
+	"menuDescription": "Ver nuestro menú",
+	"findUsTitle": "Encuéntranos",
+	"followUsTitle": "Síguenos",
+	"addressTitle": "Dirección",
+	"hoursTitle": "Horarios",
+	"monday": "Lunes",
+	"tuesday": "Martes",
+	"wednesdayToSaturday": "Miércoles - Sábado",
+	"sundayHolidays": "Domingo y Todos los Días Festivos",
+	"closed": "Cerrado",
 	"navigation": {
 		"back": "Regresar",
 		"home": "Volver al inicio",
 		"home_tab": "Inicio",
 		"about_tab": "Acerca de",
-		"contact_tab": "Contáctenos"
+		"contact_tab": "Contáctenos",
+		"view_menu": "Ver Menú"
 	},
 	"error": {
 		"500": {
