@@ -5,7 +5,9 @@ import { Button } from "../ui/button"
 
 export function TypographyH2(sectionTitle: string): JSX.Element {
 	return (
-		<h2 className="scroll-m-20 border-b pt-8 pb-2 font-semibold text-3xl tracking-tight first:mt-0">{sectionTitle}</h2>
+		<h2 className="scroll-m-20 border-[color:var(--bottega-matti-secondary)] border-b pt-8 pb-2 font-semibold text-3xl tracking-tight first:mt-0">
+			{sectionTitle}
+		</h2>
 	)
 }
 
@@ -49,9 +51,8 @@ export function TypographyButton(t: ReturnType<typeof useTranslation>["t"]): JSX
 	const linkToMenu = menuPdf
 	return (
 		<div>
-			<p>{t("menuDescription")}</p>
-			<div className="flex justify-center pt-8">
-				<Button asChild size={"lg"}>
+			<div className="flex flex-col justify-center pt-8 font-cerebri">
+				<Button asChild size={"lg"} className="bg-[color:var(--bottega-matti-primary)] text-base dark:text-white">
 					<a href={linkToMenu} download="Bottega_Matti_Menu.pdf">
 						{t("navigation.view_menu")}
 					</a>

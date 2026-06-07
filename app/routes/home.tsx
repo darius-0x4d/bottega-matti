@@ -16,13 +16,13 @@ const addressAndHours = (t: ReturnType<typeof useTranslation>["t"]): JSX.Element
 		<>
 			<div className="my-6 list-disc [&>li]:mt-2 [&>li]:pb-6">
 				<p>
-					<span className="font-semibold text-lg">{t("addressTitle")}:</span> Cra. 4 #11-88, La Candelaria, Bogotá,
-					Cundinamarca, Colombia
+					<span className="font-bold font-cerebri text-lg">{t("addressTitle")}: </span>
+					<span className="font-cerebri">Cra. 4 #11-88, La Candelaria, Bogotá, Cundinamarca, Colombia</span>
 				</p>
 			</div>
 			<div className="">
-				<p className="font-semibold text-lg">{t("hoursTitle")}</p>
-				<ul className="my-1 ml-6 list-disc [&>li]:mt-1">
+				<p className="font-cerebri font-semibold text-lg">{t("hoursTitle")}</p>
+				<ul className="my-1 ml-6 list-disc font-cerebri [&>li]:mt-1">
 					<li>
 						<span className="font-bold">{t("monday")}:</span> 12:00 PM - 8:30 PM
 					</li>
@@ -64,7 +64,7 @@ const PhoneLink = () => {
 				href={`https://wa.me/${rawPhoneNumber}`}
 				className="flex items-center space-x-2 text-lg leading-7 hover:underline"
 			>
-				<IconBrandWhatsapp size={24} />
+				<IconBrandWhatsapp size={24} className="text-[color:var(--bottega-matti-primary)]" />
 				<span>{phoneNumber}</span>
 			</a>
 		)
@@ -76,7 +76,7 @@ const PhoneLink = () => {
 			onClick={handleDesktopClick}
 			className="flex items-center space-x-2 text-lg leading-7 hover:underline"
 		>
-			<IconBrandWhatsapp size={24} />
+			<IconBrandWhatsapp size={24} className="text-[color:var(--bottega-matti-primary)]" />
 			<span>{copied ? "Copied!" : phoneNumber}</span>
 		</button>
 	)
@@ -84,7 +84,7 @@ const PhoneLink = () => {
 
 const socialMediaLinks = (): JSX.Element => {
 	return (
-		<div className="flex max-w-md flex-col">
+		<div className="flex max-w-md flex-col font-cerebri">
 			<div className="mt-6">
 				<PhoneLink />
 			</div>
@@ -95,7 +95,7 @@ const socialMediaLinks = (): JSX.Element => {
 				rel="noopener noreferrer"
 				className="mt-6 flex items-center space-x-2 text-lg leading-7 hover:underline"
 			>
-				<IconBrandInstagram size={24} />
+				<IconBrandInstagram size={24} className="text-[color:var(--bottega-matti-primary)]" />
 				<span>bottegamatti</span>
 			</a>
 
@@ -105,7 +105,7 @@ const socialMediaLinks = (): JSX.Element => {
 				rel="noopener noreferrer"
 				className="mt-6 flex items-center space-x-2 text-lg leading-7 hover:underline"
 			>
-				<IconBrandTiktok size={24} />
+				<IconBrandTiktok size={24} className="text-[color:var(--bottega-matti-primary)]" />
 				<span>bottega.matti</span>
 			</a>
 		</div>

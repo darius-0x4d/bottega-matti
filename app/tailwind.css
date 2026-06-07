@@ -4,9 +4,69 @@
 /*---break--- */
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+	font-family: "Anonymous Pro";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./assets/fonts/AnonymousPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Anonymous Pro";
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./assets/fonts/AnonymousPro-Italic.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Anonymous Pro";
+	font-style: normal;
+	font-weight: 600 700;
+	font-display: swap;
+	src: url("./assets/fonts/AnonymousPro-Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Anonymous Pro";
+	font-style: italic;
+	font-weight: 600 700;
+	font-display: swap;
+	src: url("./assets/fonts/AnonymousPro-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Cerebri";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./assets/fonts/CerebriSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Cerebri";
+	font-style: normal;
+	font-weight: 600 700;
+	font-display: swap;
+	src: url("./assets/fonts/CerebriSans-Bold.ttf") format("truetype");
+}
+
 @theme {
+	/* Custom Fonts */
+	--font-sans:
+		"Anonymous Pro", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji";
+	--font-anonymous-pro: "Anonymous Pro", monospace;
+	--font-cerebri: "Cerebri", sans-serif;
+
 	/* Your theme styles go here */
 	--animate-float: float 3s ease-in-out infinite;
+
+	--bottega-matti-primary: #bf181a;
+	--bottega-matti-secondary: #e2c9ac;
+	--bottega-matti-tertiary: #fdfad9;
+	--bottega-matti-quaternary: #ece2d8;
 
 	@keyframes float {
 		0%,
